@@ -5,6 +5,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+
+/**
+ * example - 4
+ * Comparator is a @FunctionalInterface
+ * Comparator.compare is a function which can be replaced by lambda expression
+ * int compare(T o1, T o2);
+ */
 public class SortApple {
 
     public static void main(String[] args) {

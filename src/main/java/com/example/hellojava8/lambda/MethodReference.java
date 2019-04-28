@@ -8,6 +8,9 @@ import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+/**
+ * example - 6
+ */
 public class MethodReference {
 
     public static void main(String[] args) {

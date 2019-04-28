@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * example - 1
+ */
 public class FilterApple {
 
     //1 写死

@@ -1,5 +1,8 @@
 package com.example.hellojava8.lambda;
 
+/**
+ * example - 2
+ */
 public class RunnableByLambda {
 
     public static void main(String[] args) throws InterruptedException {
