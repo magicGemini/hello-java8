@@ -30,12 +30,16 @@ public class CollectorAction3 {
     }
 
     private static void testPartitionByWithPredicate() {
-        Map<Boolean, List<Dish>> collect = menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian));
+        Map<Boolean, List<Dish>> collect = menu.stream().collect(
+                Collectors.partitioningBy(Dish::isVegetarian)
+        );
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
 
     private static void testPartitionByWithPredicateAndCollector() {
-        Map<Boolean, Long> collect = menu.stream().collect(Collectors.partitioningBy(Dish::isVegetarian, Collectors.counting()));
+        Map<Boolean, Long> collect = menu.stream().collect(
+                Collectors.partitioningBy(Dish::isVegetarian, Collectors.counting())
+        );
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
 

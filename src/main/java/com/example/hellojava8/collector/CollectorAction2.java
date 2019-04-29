@@ -21,11 +21,11 @@ public class CollectorAction2 {
         //12
         testGroupingByConcurrentByFunctionAndSupplierAndCollector();
         //13
-        testJoin();
+        testJoining();
         //14
-        testJoinWithDelimeter();
+        testJoiningWithDelimeter();
         //15
-        testJoinWithDelimeterAndPrefixAndSuffix();
+        testJoiningWithDelimeterAndPrefixAndSuffix();
         //16
         testMapping();
         //17
@@ -55,17 +55,17 @@ public class CollectorAction2 {
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
 
-    private static void testJoin() {
+    private static void testJoining() {
         String collect = menu.stream().map(Dish::getName).collect(Collectors.joining());
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
 
-    private static void testJoinWithDelimeter() {
+    private static void testJoiningWithDelimeter() {
         String collect = menu.stream().map(Dish::getName).collect(Collectors.joining(","));
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
 
-    private static void testJoinWithDelimeterAndPrefixAndSuffix() {
+    private static void testJoiningWithDelimeterAndPrefixAndSuffix() {
         String collect = menu.stream().map(Dish::getName).collect(Collectors.joining(",", "[", "]"));
         Optional.ofNullable(collect).ifPresent(System.out::println);
     }
