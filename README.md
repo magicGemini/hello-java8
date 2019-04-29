@@ -40,42 +40,42 @@
 
 ### 4.Collectors
 
-| 序号   | Modifier and Type | Method               |                Parameter                 |
-| ---- | ----------------- | -------------------- | :--------------------------------------: |
-| 1    |                   | averagingDouble      |             ToDoubleFunction             |
-| 2    |                   | averagingInt         |              ToIntFunction               |
-| 3    |                   | averagingLong        |              ToLongFunction              |
-| 4    |                   | collectingAndThen    |          downstream,  finisher           |
-| 5    |                   | counting             |                                          |
-| 6    |                   | groupingBy           |                classifier                |
-| 7    |                   | groupingBy           |          classifier, downstream          |
-| 8    |                   | groupingBy           |     classifier, supplier, downstream     |
-| 9    |                   | groupingByConcurrent |                classifier                |
-| 10   |                   | groupingByConcurrent |          classifier, downstream          |
-| 11   |                   | groupingByConcurrent |     classifier, supplier, downstream     |
-| 12   |                   | joining              |                                          |
-| 13   |                   | joining              |                delimiter                 |
-| 14   |                   | joining              |       delimiter,  prefix,  suffix        |
-| 15   |                   | mapping              |           mapper,  downstream            |
-| 16   |                   | maxBy                |                comparator                |
-| 17   |                   | minBy                |                comparator                |
-| 18   |                   | partitioningBy       |                predicate                 |
-| 19   |                   | partitioningBy       |          predicate, downstream           |
-| 20   |                   | reducing             |            BinaryOperator<T>             |
-| 21   |                   | reducing             |       identity, BinaryOperator<T>        |
-| 22   |                   | reducing             |   identity, mapper, BinaryOperator<T>    |
-| 23   |                   | summarizingDouble    |             ToDoubleFunction             |
-| 24   |                   | summarizingInt       |              ToIntFunction               |
-| 25   |                   | summarizingLong      |              ToLongFunction              |
-| 26   |                   | summingDouble        |             ToDoubleFunction             |
-| 27   |                   | summingInt           |              ToIntFunction               |
-| 28   |                   | summingLong          |              ToLongFunction              |
-| 30   |                   | toCollection         |               Supplier<C>                |
-| 31   |                   | toConcurrentMap      |         keyMapper,  valueMapper          |
-| 32   |                   | toConcurrentMap      |  keyMapper,  valueMapper, mergeFunction  |
-| 33   |                   | toConcurrentMap      | keyMapper,  valueMapper, mergeFunction, mapSupplier |
-| 34   |                   | toList               |         keyMapper,  valueMapper          |
-| 35   |                   | toMap                |  keyMapper,  valueMapper, mergeFunction  |
-| 36   |                   | toMap                | keyMapper,  valueMapper, mergeFunction, mapSupplier |
-| 37   |                   | toSet                |                                          |
+| 序号   | Method               |                Parameter                 |
+| ---- | -------------------- | :--------------------------------------: |
+| 1    | averagingDouble      |             ToDoubleFunction             |
+| 2    | averagingInt         |              ToIntFunction               |
+| 3    | averagingLong        |              ToLongFunction              |
+| 4    | collectingAndThen    |          downstream,  finisher           |
+| 5    | counting             |                                          |
+| 6    | groupingBy           |                classifier                |
+| 7    | groupingBy           |          classifier, downstream          |
+| 8    | groupingBy           |     classifier, supplier, downstream     |
+| 9    | groupingByConcurrent |                classifier                |
+| 10   | groupingByConcurrent |          classifier, downstream          |
+| 11   | groupingByConcurrent |     classifier, supplier, downstream     |
+| 12   | joining              |                                          |
+| 13   | joining              |                delimiter                 |
+| 14   | joining              |       delimiter,  prefix,  suffix        |
+| 15   | mapping              |           mapper,  downstream            |
+| 16   | maxBy                |                comparator                |
+| 17   | minBy                |                comparator                |
+| 18   | partitioningBy       |                predicate                 |
+| 19   | partitioningBy       |          predicate, downstream           |
+| 20   | reducing             |            BinaryOperator<T>             |
+| 21   | reducing             |       identity, BinaryOperator<T>        |
+| 22   | reducing             |   identity, mapper, BinaryOperator<T>    |
+| 23   | summarizingDouble    |             ToDoubleFunction             |
+| 24   | summarizingInt       |              ToIntFunction               |
+| 25   | summarizingLong      |              ToLongFunction              |
+| 26   | summingDouble        |             ToDoubleFunction             |
+| 27   | summingInt           |              ToIntFunction               |
+| 28   | summingLong          |              ToLongFunction              |
+| 30   | toCollection         |               Supplier<C>                |
+| 31   | toConcurrentMap      |         keyMapper,  valueMapper          |
+| 32   | toConcurrentMap      |  keyMapper,  valueMapper, mergeFunction  |
+| 33   | toConcurrentMap      | keyMapper,  valueMapper, mergeFunction, mapSupplier |
+| 34   | toList               |         keyMapper,  valueMapper          |
+| 35   | toMap                |  keyMapper,  valueMapper, mergeFunction  |
+| 36   | toMap                | keyMapper,  valueMapper, mergeFunction, mapSupplier |
+| 37   | toSet                |                                          |
 
