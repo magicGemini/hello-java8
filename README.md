@@ -1,14 +1,42 @@
 ## java8
 
 ### 1.lambda
-筛选List<Apple> -> 把条件作为参数 -> 行为参数化 -> 策略模式 -> 使用匿名类 -> lambda表达式 -> 谓词
+筛选List<Apple> -> 把方法作为参数 -> 行为参数化 -> 策略模式 -> 使用匿名类 -> lambda表达式 -> 谓词
 
-函数式接口
-@FunctionalInterface: Predicate Consumer Supplier Function
+把方法作为值传递
 
-方法推断
+**函数式接口**
+
+| 函数式接口             | 函数描述符             |
+| ----------------- | ----------------- |
+| Predicate<T>      | T -> boolean      |
+| Consumer<T>       | T -> void         |
+| Function<T,R>     | T -> R            |
+| Supplier<T>       | () -> T           |
+| UnaryOperator<T>  | T -> T            |
+| BinaryOperator<T> | (T, T) -> T       |
+| BiPredicate<L,R>  | (L, R) -> boolean |
+| BiConsumer<T,U>   | (T, U) -> void    |
+| BiFunction<T,U,R> | (T, U) -> R       |
+
+Predicate Consumer Supplier Function
+
+**方法引用**
+
+
+
+**复合lambda表达式**
+
+1、比较器复合：Comparator.comparing().reverse().thenComparing()
+
+2、谓词复合：Predicate.and(), or(), negate()
+
+3、函数复合：Function andThen(), compose()
+
+
 
 小结：
+
 * Lambda表达式可以理解为一种匿名函数：它没有名称，但有参数列表、函数主体、返回
   类型，可能还有一个可以抛出的异常的列表。
 * Lambda表达式让你可以简洁地传递代码。
@@ -30,6 +58,27 @@
 
 
 ### 2.stream
+
+中间操作和终端操作
+
+| 操作        | 类型   | 返回类型        | 使用的类型/函数式接口            | 函数描述符          |
+| --------- | ---- | ----------- | ---------------------- | -------------- |
+| filter    | 中间   | Stream<T>   | Predicate<T>           | T -> boolean   |
+| distinct  | 中间   | Stream<T>   |                        |                |
+| skip      | 中间   | Stream<T>   | long                   |                |
+| limit     | 中间   | Stream<T>   | long                   |                |
+| map       | 中间   | Stream<R>   | Function<T, R>         | T -> R         |
+| flatMap   | 中间   | Stream<R>   | Function<T, Stream<R>> | T -> Stream<R> |
+| sorted    | 中间   | Stream<T>   | Comparator<T>          | (T, T) -> int  |
+| anyMatch  | 终端   | boolean     | Predicate<T>           | T -> boolean   |
+| noneMatch | 终端   | boolean     | Predicate<T>           | T -> boolean   |
+| allMatch  | 终端   | boolean     | Predicate<T>           | T -> boolean   |
+| findAny   | 终端   | Optional<T> |                        |                |
+| findFirst | 终端   | Optional<T> |                        |                |
+| forEach   | 终端   | void        | Consumer<T>            | T -> void      |
+| collect   | 终端   | R           | Collector<T, A, R>     |                |
+| reduce    | 终端   | Optional<T> | BinaryOperator<T>      | (T, T) -> T    |
+| count     | 终端   | long        |                        |                |
 
 
 
