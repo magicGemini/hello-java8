@@ -18,8 +18,8 @@ public class ComposeLambdaTest {
                 new Apple("green", 200),
                 new Apple("green", 120),
                 new Apple("red", 130),
-                new Apple("yellow", 210));
-
+                new Apple("yellow", 210)
+        );
 
         // 比较器的复合 Comparator.comparing()
         list.sort(Comparator.comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));
